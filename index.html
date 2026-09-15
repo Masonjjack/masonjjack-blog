@@ -1,125 +1,248 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My blog</title>
+
+    <title>My Blog</title>
 
     <style>
-        .logo {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            width: 300px;
-            height: auto;
+        * {
+            box-sizing: border-box;
         }
 
-        body {
-            height: 2000px; /* Just to demonstrate scrolling */
-        }
-    </style>
-
-
-</head>
-<body>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My home</title>
-
-    <style>
-        body {
-            margin: 0;
-          
-                     
+        html {
+            scroll-behavior: smooth;
         }
 
+      body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+    overflow-x: hidden;
+        }
+
+        /* Navigation */
         nav {
-            background-color: white;
+            width: 100%;
             display: flex;
             justify-content: center;
-            gap: 100px;
-            padding: 20px;
+            align-items: center;
+            gap: 30px;
+            padding: 18px 10px;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav a {
             color: black;
             text-decoration: none;
-            font-size: 20px;
+            font-size: 16px;
         }
 
         nav a:hover {
             color: blue;
         }
 
+        /* Main content */
         section {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 15px;
             text-align: center;
-            padding: 100px 20px;
+        }
+
+        /* All images */
+        img {
+            display: block;
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            margin: 25px auto;
+        }
+
+        /* Logo */
+        .logo {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            width: 90px;
+            max-width: 25vw;
+            height: auto;
+            z-index: 2000;
+        }
+
+        /* Large artwork */
+        .wide-image {
+            width: 100%;
+            max-width: 1300px;
+        }
+
+        .medium-image {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .small-image {
+            width: 100%;
+            max-width: 250px;
+        }
+
+        /* Text */
+        p {
+            max-width: 700px;
+            margin: 35px auto;
+            padding: 0 15px;
+            text-align: center;
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        /* Video */
+        video {
+            display: block;
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            margin: 40px auto;
+        }
+
+        /* Audio */
+        audio {
+            display: block;
+            width: calc(100% - 30px);
+            max-width: 600px;
+            margin: 40px auto;
+        }
+
+        /* Extra spacing on larger screens */
+        @media (min-width: 768px) {
+            section {
+                padding: 80px 30px;
+            }
+
+            nav {
+                gap: 70px;
+            }
+
+            nav a {
+                font-size: 20px;
+            }
+
+            .logo {
+                width: 150px;
+                top: 20px;
+                left: 20px;
+            }
+
+            p {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
 
 <body>
- <section id="blog">
-   <h1></h1>
- <img src="images/marie3.png" alt="" width="250">
+
+    <!-- Fixed logo -->
+    <img
+        src="images/masonjjack.png"
+        alt="Mason Jjack logo"
+        class="logo"
+    >
 
 
-<body>
 
+    <main>
+
+
+
+            <img
+                src="images/marie3.png"
+                alt=""
+                class="small-image"
+            >
+
+            <img
+                src="images/akira.png"
+                alt=""
+                class="wide-image"
+            >
+
+            <img
+                src="images/oystercad.png"
+                alt=""
+                class="medium-image"
+            >
+
+            <p>
+                in pain i wake up
+            </p>
+
+            <img
+                src="images/rubytext.png"
+                alt=""
+                class="wide-image"
+            >
+
+            <img
+                src="images/resev.png"
+                alt=""
+                class="wide-image"
+            >
+
+            <img
+                src="images/tann.png"
+                alt=""
+                class="wide-image"
+            >
+
+            <p>
+                u was always thinking,<br>
+                that smokings overrated,<br>
+                and cd's sound amazing,<br>
+                plus u would always say things,<br>
+                like fake it til u make it,<br>
+                or it's weird 2 not sleep naked,<br>
+                I smoke more now without u hating.
+            </p>
+
+            <img
+                src="images/nancy.png"
+                alt=""
+                class="wide-image"
+            >
 
  
-   
- <h3></h3>
-    <p>.</p>
-
-    <!-- This image stays fixed -->
-    <img src="images/masonjjack.png" alt="Mason Jjack logo" class="logo">
-
-    <!-- These images scroll normally -->
-    <img src="images/akira.png" alt="" width="1500">
-    <img src="images/oystercad.png" alt="" width="500">
-
-</head>
-<body>
-<p style="text-align: center;">
-    in pain i wake up
-</p>
-
-<img src="images/rubytext.png" alt="" width="1300">
-<img src="images/resev.png" alt="" width="1300">
-<img src="images/tann.png" alt="" width="1300">
-</head>
-<body>
-<p style="text-align: center;">
-    u was always thinking,
-    that smokings overrated,
-    and cd's sound amazing,
-    plus u would always say things,
-    like fake it til u make it, 
-    or it's weird 2 not sleep naked, 
-I smoke more now without u hating.
-    
-</p>
 
 
-<img src="images/nancy.png" alt="" width="1300">
 
-<video autoplay twice width="800">
-    <source src="videos/harmony .mp4" type="video/mp4">
-</video>
+            <video autoplay loop playsinline controls>
+                <source
+                    src="videos/harmony .mp4"
+                    type="video/mp4"
+                >
+              
+            </video>
 
 
-</head>
-<body>
-<p style="text-align: center;">
-i fuk wid Steve jobs...
-</p>
 
-<au controls src="audio/luv2Cme (dont look back).mp3"></audio>
+            <p>
+                i fuk wid Steve jobs...
+            </p>
 
+        
+ 
+
+    </main>
 
 </body>
-
-
 </html>
+
